@@ -1,11 +1,10 @@
 #include "sort.h"
 
 /**
- * counting_sort - sorts an array with the counting sort algorithm
+ * counting_sort - sorts an array with the Counting sort algorithm
  * @array: array to sort
  * @size: size of the array
  */
-
 void counting_sort(int *array, size_t size)
 {
 	int *count_arr, *out_arr, max, num, j, l;
@@ -38,9 +37,7 @@ void counting_sort(int *array, size_t size)
 		count_arr[array[m]]--;
 	}
 	for (n = 0; n < size; n++)
-	{
 		array[n] = out_arr[n];
-	}
 
 	free(count_arr);
 	free(out_arr);
